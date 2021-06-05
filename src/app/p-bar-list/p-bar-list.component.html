@@ -1,0 +1,12 @@
+<div class="x-center">
+  <app-p-bar *ngFor="let bar of payload.bars; trackBy: trackByBars" [value]="bar" [limit]="payload.limit"></app-p-bar>
+
+  <div *ngIf="payload.bars.length" class="control-items">
+    <select name="bars" id="bar-select" [(ngModel)]="selectedBar">
+      <option *ngFor="let bar of payload.bars; let i = index" [value]="i">#progress{{i+1}}</option>
+    </select>
+    <button *ngFor="let b of payload.buttons" (click)="changeProgress(b)">
+      {{b > 0 ? '+' + b : b}}
+    </button>
+  </div>
+</div>

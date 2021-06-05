@@ -1,0 +1,8 @@
+{
+  "/bars": {
+    "target": "http://pb-api.herokuapp.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

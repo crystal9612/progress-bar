@@ -1,0 +1,7 @@
+<div
+  class="my-3 h-3 progress-bar{{bgColor && percent <=100 ? ' bg-' + bgColor : ' bg-danger'}}{{textColor ? ' text-' + textColor : ''}}"
+  role="progressbar" [style.width.%]="widthPercent" [attr.aria-valuenow]="value" aria-valuemin="0"
+  [attr.aria-valuemax]="limit">
+  <span *ngIf="showValue" class="progress-text">{{(value * 100 /limit | number: '1.0-0') + '%'}}</span>
+  <ng-content></ng-content>
+</div>
